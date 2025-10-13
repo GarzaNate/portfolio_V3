@@ -1,29 +1,32 @@
 import React from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import { Particles } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const particlesInit = async (main) => {
-    await loadFull(main);
+  const particlesInit = async (engine) => {
+    await loadSlim(engine);
   };
 
   return (
     <section id="home" className="relative min-h-[80vh] flex items-center">
       <Particles
+        id="tsparticles"
         init={particlesInit}
         options={{
+          background: {
+            color: "#222831",
+          },
           fpsLimit: 60,
-          interactivity: {
-            events: { onHover: { enable: true, mode: "repulse" } },
-          },
           particles: {
-            number: { value: 35 },
+            color: { value: "#00ADB5" },
+            links: { enable: true, color: "#00ADB5" },
+            move: { enable: true, speed: 1 },
+            number: { value: 50 },
             size: { value: 3 },
-            move: { enable: true, speed: 0.6 },
           },
+          detectRetina: true,
         }}
-        className="absolute inset-0 -z-10"
       />
 
       <div className="max-w-6xl mx-auto px-6 w-full">
