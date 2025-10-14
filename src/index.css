@@ -8,11 +8,14 @@
   --color-dark: #222831;
   --color-light: #f8fafc;
   --color-accent: #22d3ee;
-  --color-primary: #00ADB5;
+  --color-primary: #00adb5;
 }
 
-:root { --accent: #22d3ee;}
+:root {
+  --accent: #22d3ee;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
+

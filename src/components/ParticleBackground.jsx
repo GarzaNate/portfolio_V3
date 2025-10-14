@@ -1,31 +1,66 @@
-import { useCallback } from "react";
-import Particles from "@tsparticles/react";
+import React, { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // lightweight version
 
 const ParticlesBackground = () => {
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
   }, []);
+
+  if (!init) return null;
 
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
       options={{
-        fullScreen: { enable: true, zIndex: -1 },
+        fullScreen: { enable: true, zIndex: 0 },
         background: { color: "transparent" },
+        fpsLimit: 120,
+        interactivity: {
+          events: {
+            onHover: {
+              enable: true,
+              mode: "repulse", // creates a slight “push away” effect
+            },
+            onDiv: {
+              enable: false,
+            },
+          },
+          modes: {
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            parallax: {
+              enable: true,
+              force: 60, // how strong the depth movement feels
+              smooth: 10, // how smooth it moves
+            },
+          },
+        },
         particles: {
-          number: { value: 60 },
-          color: { value: "#22d3ee" }, // your accent color
+          number: { value: 100, density: { enable: true, area: 800 } },
+          color: { value: "#22d3ee" },
           shape: { type: "circle" },
-          opacity: { value: 0.3 },
+          opacity: { value: 0.5 },
           size: { value: { min: 1, max: 3 } },
-          move: { enable: true, speed: 0.6 },
+          move: {
+            enable: true,
+            speed: 0.6,
+            direction: "none",
+            random: false,
+            straight: false,
+            outModes: { default: "out" },
+          },
           links: {
             enable: true,
-            distance: 120,
+            distance: 150,
             color: "#22d3ee",
-            opacity: 0.25,
+            opacity: 0.3,
             width: 1,
           },
         },

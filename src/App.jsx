@@ -10,10 +10,12 @@ import ParticlesBackground from "./components/ParticleBackground";
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-dark text-light transition-colors">
+    <div className="relative min-h-screen text-light transition-colors">
       <ParticlesBackground />
+
+      <div className="absolute inset-0 bg-dark/90 -z-10" />
       <Navbar />
-      <main className="relative z-10 pt-20">
+      <main className="pt-20 relative z-10">
         <Hero />
         <About />
         <Projects />
