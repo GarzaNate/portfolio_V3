@@ -6,12 +6,14 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ParticlesBackground from "./components/ParticleBackground";
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark text-light transition-colors">
+    <div className="relative min-h-screen bg-dark text-light transition-colors">
+      <ParticlesBackground />
       <Navbar />
-      <main className="pt-20">
+      <main className="relative z-10 pt-20">
         <Hero />
         <About />
         <Projects />

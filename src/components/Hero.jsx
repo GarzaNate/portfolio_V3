@@ -4,37 +4,8 @@ import { loadSlim } from "@tsparticles/slim";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  // Particles init
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
-  }, []);
-
-  // Particles options
-  const particlesOptions = {
-    fullScreen: { enable: true, zIndex: -1 }, // behind all content
-    fpsLimit: 60,
-    interactivity: {
-      events: { onHover: { enable: true, mode: "repulse" }, resize: true },
-    },
-    particles: {
-      color: { value: "#00ADB5" },
-      links: { enable: true, color: "#00ADB5", distance: 150 },
-      move: { enable: true, speed: 0.5, direction: "none", outModes: "out" },
-      number: { value: 50 },
-      opacity: { value: 0.5 },
-      size: { value: 3 },
-    },
-    detectRetina: true,
-  };
-
   return (
-    <section
-      id="home"
-      className="relative min-h-[80vh] flex items-center"
-    >
-      {/* Particle background */}
-      <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
-
+    <section id="home" className="relative min-h-[80vh] flex items-center">
       {/* Content */}
       <div className="max-w-6xl mx-auto px-6 w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -50,7 +21,8 @@ export default function Hero() {
             </h1>
             <p className="mt-4 max-w-xl leading-relaxed">
               I build reliable, scalable web applications — frontend to backend.
-              I love clean code, clear systems, and projects that make an impact.
+              I love clean code, clear systems, and projects that make an
+              impact.
             </p>
             <div className="mt-6 flex gap-4 flex-wrap">
               <a
