@@ -4,9 +4,15 @@
 
 @import "tailwindcss";
 
+@theme {
+  --color-dark: #222831;
+  --color-light: #f8fafc;
+  --color-accent: #22d3ee;
+  --color-primary: #00ADB5;
+}
+
 :root { --accent: #22d3ee;}
+
 body {
-  background-color: #1a202c; /* Replace with your dark color */
-  color: #f8fafc;            /* Replace with your light color */
-  font-family: 'Inter', sans-serif; /* Replace with your desired font */
+  font-family: 'Inter', sans-serif;
 }
