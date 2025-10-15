@@ -19,7 +19,7 @@ const ParticlesBackground = () => {
       options={{
         fullScreen: { enable: true, zIndex: 0 },
         background: { color: "transparent" },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
           events: {
             onHover: {
