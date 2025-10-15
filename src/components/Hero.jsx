@@ -1,6 +1,4 @@
 import React, { useCallback } from "react";
-import { Particles } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -17,7 +15,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold">
-              Hi, I'm Nate Garza <span className="inline-block">👋</span>
+              Hi, I'm Josue Garza <span className="inline-block">👋</span>
             </h1>
             <p className="mt-4 max-w-xl leading-relaxed">
               I build reliable, scalable web applications — frontend to backend.

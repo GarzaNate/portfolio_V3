@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <header className="fixed w-full z-40 top-0 left-0">
       <nav className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between backdrop-blur-md">
-        <div className="text-lg font-semibold">Nate Garza</div>
+        <div className="text-lg font-semibold">Josue Garza</div>
         <div className="flex items-center gap-6">
           <div className="hidden md:flex gap-4">
             <Link
