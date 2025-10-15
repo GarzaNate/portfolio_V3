@@ -13,15 +13,15 @@ function App() {
     <div className="relative min-h-screen text-light transition-colors">
       <ParticlesBackground />
 
-      <div className="absolute inset-0 bg-dark/90 -z-10" />
+      <div className="absolute inset-0 bg-dark -z-10" />
       <Navbar />
-      <main className="pt-20 relative z-10">
+      
         <Hero />
         <About />
         <Projects />
         <Skills />
         <Contact />
-      </main>
+      
       <Footer />
     </div>
   );
