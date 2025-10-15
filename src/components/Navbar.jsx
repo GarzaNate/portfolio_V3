@@ -11,60 +11,49 @@ export default function Navbar() {
   }, [theme]);
 
   return (
-    <header className="fixed w-full z-40 top-0 left-0">
-      <nav className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between backdrop-blur-md">
-        <div className="text-lg font-semibold">Josue Garza</div>
-        <div className="flex items-center gap-6">
-          <div className="hidden md:flex gap-4">
-            <Link
-              to="home"
-              smooth={true}
-              offset={-80}
-              className="cursor-pointer"
-            >
-              Home
-            </Link>
-            <Link
-              to="about"
-              smooth={true}
-              offset={-80}
-              className="cursor-pointer"
-            >
-              About
-            </Link>
-            <Link
-              to="projects"
-              smooth={true}
-              offset={-80}
-              className="cursor-pointer"
-            >
-              Projects
-            </Link>
-            <Link
-              to="skills"
-              smooth={true}
-              offset={-80}
-              className="cursor-pointer"
-            >
-              Skills
-            </Link>
-            <Link
-              to="contact"
-              smooth={true}
-              offset={-80}
-              className="cursor-pointer"
-            >
-              Contact
-            </Link>
-          </div>
+    <header className="py-8 xl:py-12 text-white">
+      <div className="container mx-auto flex justify-between items-center">
+        <a href="">
+          <h1 className="text-4xl font-semibold">
+            Josue
+            <span className="text-accent">.</span>
+          </h1>
+        </a>
+
+        <div className="hidden xl:flex items-center gap-8"></div>
+        <nav className="flex gap-8">
+          <Link
+            to="professional"
+            smooth={true}
+            offset={-80}
+            className="cursor-pointer"
+          >
+            Professional
+          </Link>
+          <Link
+            to="personal"
+            smooth={true}
+            offset={-80}
+            className="cursor-pointer"
+          >
+            Personal
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            offset={-80}
+            className="cursor-pointer"
+          >
+            Contact
+          </Link>
           <button
             onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
             className="p-2 rounded-full border"
           >
             {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
           </button>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }

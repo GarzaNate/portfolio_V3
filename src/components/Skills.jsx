@@ -1,9 +1,9 @@
 import React from "react";
 
 const SKILLS = {
-  Frontend: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
-  Backend: ["Node", "Express", "MongoDB", "Java"],
-  Tools: ["Git", "VSCode", "Postman", "Docker"],
+  Frontend: ["React", "JavaScript", "Tailwind", "HTML", "CSS"],
+  Backend: ["Java", "C++", "Node", "Express", "MongoDB", "MySQL"],
+  Tools: ["Git", "VSCode", "Postman", "Figma", "JUnit"],
 };
 
 export default function Skills() {

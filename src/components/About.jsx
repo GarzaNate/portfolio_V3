@@ -24,7 +24,7 @@ export default function About() {
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="space-y-3">
             <p>
-              <strong>Interests:</strong> BJJ, camping, music, coffee
+              <strong>Interests:</strong> BJJ, Hiking, Music, Anime
             </p>
             <p>
               <strong>Currently learning:</strong> TypeScript & advanced React
