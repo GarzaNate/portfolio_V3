@@ -3,12 +3,6 @@ import { Link } from "react-scroll";
 import { Sun, Moon } from "react-feather";
 
 export default function Navbar() {
-  const [theme, setTheme] = React.useState("light");
-
-  React.useEffect(() => {
-    if (theme === "dark") document.documentElement.classList.add("dark");
-    else document.documentElement.classList.remove("dark");
-  }, [theme]);
 
   return (
     <header className="py-8 xl:py-12 text-white">
@@ -46,12 +40,6 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <button
-            onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
-            className="p-2 rounded-full border"
-          >
-            {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
-          </button>
         </nav>
       </div>
     </header>
