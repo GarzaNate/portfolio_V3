@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   const { register, handleSubmit, reset } = useForm();
@@ -17,8 +18,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 ">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="contact" className="flex min-h-screen w-full flex-col py-20">
+      <div className="max-w-3xl mx-auto w-full flex-1 px-6">
         <h2 className="text-2xl font-bold">Contact</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="mt-6 grid gap-4">
           <input
@@ -42,6 +43,9 @@ export default function Contact() {
           </button>
         </form>
       </div>
+
+      
+      <Footer />
     </section>
   );
 }

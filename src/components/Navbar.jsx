@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <header className="py-8 xl:py-12 text-white">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="">
+        <a href="#">
           <h1 className="text-4xl font-semibold">
             Josue
             <span className="text-accent">.</span>
@@ -17,20 +17,20 @@ export default function Navbar() {
         <div className="hidden xl:flex items-center gap-8"></div>
         <nav className="flex gap-8">
           <Link
-            to="professional"
+            to="about"
             smooth={true}
             offset={-80}
             className="cursor-pointer"
           >
-            Professional
+            About
           </Link>
           <Link
-            to="personal"
+            to="projects"
             smooth={true}
             offset={-80}
             className="cursor-pointer"
           >
-            Personal
+            Projects
           </Link>
           <Link
             to="contact"

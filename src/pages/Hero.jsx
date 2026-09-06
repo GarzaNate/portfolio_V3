@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import HeroImg from "../assets/hero.jpg";
+import Wizard from "../assets/wizard.png";
 
 export default function Hero() {
   return (
@@ -56,7 +57,7 @@ export default function Hero() {
         >
           <div className="w-[260px] h-[260px] md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] rounded-full overflow-hidden shadow-lg shadow-accent/50">
             <img
-              src={HeroImg}
+              src={Wizard}
               alt="Josue Garza"
               className="w-full h-full object-cover scale-105"
             />
